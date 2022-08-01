@@ -46,6 +46,7 @@ async def private_link_handler(c, message:Message):
         
 From User: {message.from_user.mention} [`{message.from_user.id}`]
 User API: `{user["shortener_api"]}`
+
 #NewPost
 """
 

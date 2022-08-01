@@ -37,6 +37,11 @@
       "description": "Your database URI from mongodb.com",
       "value": "",
       "required": true
+    },
+    "BIN_CHANNEL":{
+      "description": "Your Log Channel",
+      "value": "-100",
+      "required": true
     }
   },
   "addons": [],

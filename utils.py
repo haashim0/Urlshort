@@ -17,7 +17,6 @@ logger.setLevel(logging.ERROR)
 
 async def main_convertor_handler(message:Message, user=None):
 
-
     header_text = user["header_text"] if user["is_header_text"] else ""
     footer_text = user["footer_text"] if user["is_footer_text"] else ""
     username = user["username"] if user["is_username"] else None
@@ -60,24 +59,7 @@ async def main_convertor_handler(message:Message, user=None):
         if message.photo and banner_image:
             fileid = banner_image
 
-        
-
     if message.text:
-        if user_method in ["droplink", "mdlink"] :
-            if '|' not in caption:
-                pass
-            else:
-                regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))\s\|\s([a-zA-Z0-9_]){,30}"
-                custom_alias = re.match(regex, caption)
-
-                if custom_alias:
-                    custom_alias = custom_alias.group(0).split('|')
-                    alias = custom_alias[1].strip()
-                    url = custom_alias[0].strip()
-                    shortenedText = await method_func(url, alias)
-        
-
-
         return await message.reply(shortenedText, disable_web_page_preview=True, reply_markup=reply_markup, quote=True)
 
     elif message.media:
@@ -124,9 +106,9 @@ async def replace_link(user, text, x=""):
         # Include domain validation 
         try:
             short_link = await shortzy.convert(link, x)
-        except:
-            short_link = await tiny_url_main(await shortzy.get_quick_link(link))
-        text = text.replace(long_url, short_link)
+            text = text.replace(long_url, short_link)
+        except Exception as e:
+            logging.exception("Error converting link to short link: %s" % e)
 
     return text
 

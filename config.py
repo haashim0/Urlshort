@@ -25,5 +25,3 @@ REPLIT_APP_NAME = os.environ.get("REPLIT_APP_NAME", None)
 REPLIT = f"https://{REPLIT_APP_NAME.lower()}.{REPLIT_USERNAME}.repl.co" if REPLIT_APP_NAME and REPLIT_USERNAME else False
 PING_INTERVAL = int(os.environ.get("PING_INTERVAL", "300"))
 BASE_SITE = "du-link.in"
-
-

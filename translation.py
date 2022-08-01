@@ -66,7 +66,7 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
 START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('Announcement', callback_data='anc_command'),
+        InlineKeyboardButton('Copyrighted Links', callback_data='anc_command'),
         InlineKeyboardButton('Help', callback_data=f'help_command'),
         
     ],
