@@ -67,7 +67,7 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
     elif query.data == 'anc_command':
         try:
             anc = await db.get_announcements()
-            n = "No announcement available right now" if anc["text"] == "" else anc["text"]
+            n = "No copyrighted links available right now" if anc["text"] == "" else anc["text"]
             await query.message.edit(n, reply_markup=BACK_REPLY_MARKUP)
         except Exception as e:
             print(e)
