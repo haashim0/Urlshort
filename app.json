@@ -28,6 +28,10 @@
       "value": ""
     },
 
+    "OWNER_ID": {
+      "description": "ID of the owner",
+      "value": ""
+    },
     "DATABASE_NAME": {
       "description": "Name of the database",
       "value": "Shortener",

@@ -1,5 +1,6 @@
 import asyncio
 import re
+from config import OWNER_ID
 from database import update_user_info
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, CallbackQuery
@@ -50,14 +51,20 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
             logging.exception(e)
 
     elif query.data == 'about_command':
-        bot = await bot.get_me()
-        await query.message.edit(ABOUT_TEXT.format(bot.mention(style='md')), reply_markup=ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
+        try:
+            me = await bot.get_me()
+            owner = await bot.get_users(OWNER_ID)
+            await query.message.edit(ABOUT_TEXT.format(
+                me.mention(style='md'),
+                owner.mention(style='md'),), reply_markup=ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
+        except Exception as e:
+            logging.exception(e)
 
     elif query.data == 'start_command':
         await query.message.edit(START_MESSAGE.format(
             query.message.from_user.mention,
+            owner.mention(style='md') 
             ), reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
-
 
     elif query.data == 'restart':
         await query.message.edit('**Restarting.....**')

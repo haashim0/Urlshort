@@ -1,6 +1,6 @@
 import datetime
 from translation import *
-from config import ADMINS, BASE_SITE, BIN_CHANNEL
+from config import ADMINS, BASE_SITE, BIN_CHANNEL, OWNER_ID
 from database import db
 from database.users import get_user, total_users_count, update_user_info
 from helpers import temp
@@ -61,10 +61,16 @@ async def help_command(c, m: Message):
 @Client.on_message(filters.command('about'))
 async def about_command(c, m: Message):
     bot = await c.get_me()
+    owner = await c.get_users(OWNER_ID)
     if WELCOME_IMAGE:
-        return await m.reply_photo(photo=WELCOME_IMAGE, caption=ABOUT_TEXT.format(bot.mention(style='md')), disable_web_page_preview=True)
-    await m.reply_text(ABOUT_TEXT.format(bot.mention(style='md')), disable_web_page_preview=True)
+        return await m.reply_photo(
+            photo=WELCOME_IMAGE, 
+            caption=ABOUT_TEXT.format(bot.mention(style='md'), owner.mention(style='md')), 
+            disable_web_page_preview=True,
+            reply_markup=ABOUT_REPLY_MARKUP)
 
+    await m.reply_text(ABOUT_TEXT.format(bot.mention(style='md'), owner.mention(style='md')), disable_web_page_preview=True, reply_markup=ABOUT_REPLY_MARKUP)
+    
 
 @Client.on_message(filters.command('anc') & filters.private & filters.user(ADMINS))
 async def announcement_handler(c, m: Message):
