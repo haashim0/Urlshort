@@ -63,7 +63,6 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
     elif query.data == 'start_command':
         await query.message.edit(START_MESSAGE.format(
             query.message.from_user.mention,
-            owner.mention(style='md') 
             ), reply_markup=START_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
     elif query.data == 'restart':
