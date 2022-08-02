@@ -72,6 +72,10 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
         InlineKeyboardButton('About', callback_data='about_command'),
         InlineKeyboardButton('Close', callback_data='delete')
     ],
+            [
+        InlineKeyboardButton('Connect', url='https://dulink.in/'),
+    ],
+
 
 ])
 

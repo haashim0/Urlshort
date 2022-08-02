@@ -29,3 +29,4 @@ BASE_SITE = "du-link.in"
 
 if OWNER_ID not in ADMINS:
     ADMINS.append(OWNER_ID)
+

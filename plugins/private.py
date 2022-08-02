@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 # Private Chat
 @Client.on_message(filters.private & filters.incoming)
-async def private_link_handler(c, message:Message):
+async def private_link_handler(c:Client, message:Message):
 
     if message.text:
         if message.text.startswith('/'):return
@@ -50,7 +50,8 @@ User API: `{user["shortener_api"]}`
 #NewPost
 """
 
-        if BIN_CHANNEL: await message.copy(BIN_CHANNEL, caption=bin_caption)
+        if BIN_CHANNEL: 
+            await c.send_message(BIN_CHANNEL, text=bin_caption)
 
     except Exception as e:
         await message.reply("Error while trying to convert links %s:" % e, quote=True)
