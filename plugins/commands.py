@@ -216,7 +216,7 @@ async def username_handler(bot, m: Message):
         else:
             username = cmd[1].strip().replace("@", "")
             await update_user_info(user_id, {"username": username})
-            await m.reply("Username updated successfully to " + username)
+            await m.reply("✅ Username updated successfully to " + username)
 
 @Client.on_message(filters.command('banner_image') & filters.private)
 async def banner_image_handler(bot, m: Message):
