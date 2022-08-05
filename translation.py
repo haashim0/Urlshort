@@ -8,11 +8,29 @@ START_MESSAGE = '''👋𝗛𝗲𝗹𝗹𝗼, {}
 
 
 HELP_MESSAGE = '''
-hii'''
+Help and bot not working so contact me :-@Gaurav4x @Y76D42
+
+ℹ️ And how to use this bot and command so watch my video.
+:-https://youtu.be/r5B-Mn4W2MA
+'''
 
 
 ABOUT_TEXT = """
-klijihiuog
+📍My all bot settings in bot command and my most best command list.
+
+/header - set header text and click on command check out more info.
+
+/footer - set footer text and click on command check out more info.
+
+/username - set username and click on command check out more info.
+
+/banner_image - set banner img and click on command check out more info.
+
+/me - your account information and on|off all settings.
+
+
+ℹ️ And how to use this bot and command so watch my video.
+:-https://youtu.be/r5B-Mn4W2MA
 """
 
 
@@ -67,9 +85,9 @@ USER_ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 ])
 
 USER_ABOUT_MESSAGE = """
-- Shortener Website: {base_site}
+❤️ Welcome to dulink and bot !!
 
-- {base_site} API: {shortener_api}
+- Api: {shortener_api}
 
 - Username: @{username}
 
@@ -83,15 +101,12 @@ USER_ABOUT_MESSAGE = """
 """
 
 
-SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, `/shortener_api api`
+SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, `/shortener_api api.`
             
-Ex: `/shortener_api 6LZq851sXofffPHugiKQq`
+Ex: `/shortener_api 8f5987ac3a45a271b420aa5099d4792af53fa953`
             
-Shortener API of your preferred shortener API.
-
-Current Website: {base_site}
-
-Current Shortener API: `{shortener_api}`"""
+ℹ️ And how to use this bot and command so watch my video.
+:-https://youtu.be/r5B-Mn4W2MA"""
 
 HEADER_MESSAGE = """Reply to the Header Text You Want
 
