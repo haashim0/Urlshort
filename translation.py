@@ -60,8 +60,13 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
 START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('📨 Copyrighted Links', callback_data='anc_command'),
+        InlineKeyboardButton('📨CopyrightLinks', callback_data='anc_command'),
         InlineKeyboardButton('🧿 Help Disk', callback_data=f'help_command'),
+        
+    ],
+     [
+        InlineKeyboardButton('✳️ On|Off', callback_data='me_command'),
+        InlineKeyboardButton('⚙️ Settings', callback_data=f'settings_command'),
         
     ],
         [
@@ -98,6 +103,10 @@ USER_ABOUT_MESSAGE = """
 
 - Banner Image: {banner_image}
 """
+
+SETTINGS_MESSAGE = '''
+hii
+'''
 
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, `/shortener_api api`
