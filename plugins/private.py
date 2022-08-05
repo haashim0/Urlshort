@@ -31,10 +31,10 @@ async def private_link_handler(c:Client, message:Message):
     user = await get_user(message.from_user.id)
 
     if not user["shortener_api"]:
-        return await message.reply_text(f"Set your /shortener_api to continue...")
+        return await message.reply_text(f"😳 Set your /shortener_api to continue...")
 
     try:
-        txt = await message.reply('`Cooking... It will take some time`', quote=True)
+        txt = await message.reply('😜 Converting......', quote=True)
         await main_convertor_handler(message, user=user)
 
         await asyncio.sleep(0.5)
@@ -54,7 +54,7 @@ User API: `{user["shortener_api"]}`
             await c.send_message(BIN_CHANNEL, text=bin_caption)
 
     except Exception as e:
-        await message.reply("Error while trying to convert links %s:" % e, quote=True)
+        await message.reply("😳 Error while trying to convert links %s:" % e, quote=True)
         logger.exception(e)
     finally:
         await txt.delete()
