@@ -44,10 +44,9 @@ async def private_link_handler(c:Client, message:Message):
 
         bin_caption = f"""{caption}
         
-From User: {message.from_user.mention} [`{message.from_user.id}`]
-User API: `{user["shortener_api"]}`
-
-#NewPost
+👨🏻‍💻 From User :- {message.from_user.mention} [`{message.from_user.id}`]
+♌️ User API :-
+`{user["shortener_api"]}`
 """
 
         if BIN_CHANNEL: 
