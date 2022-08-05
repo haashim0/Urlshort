@@ -169,23 +169,23 @@ async def get_me_button(user):
                 [
                     InlineKeyboardButton('Header Text',
                                         callback_data=f'ident'),
-                    InlineKeyboardButton('✅ Enable' if not user["is_header_text"] else '❌ Disable',
+                    InlineKeyboardButton('❎ Off' if not user["is_header_text"] else '✅ On',
                                         callback_data=f'setgs#is_header_text#{not user["is_header_text"]}#{str(user_id)}')
                 ],
                 [
                     InlineKeyboardButton('Footer Text', callback_data='ident'),
-                    InlineKeyboardButton('✅ Enable' if not user["is_footer_text"] else '❌ Disable',
+                    InlineKeyboardButton('❎ Off' if not user["is_footer_text"] else '✅ On',
                                         callback_data=f'setgs#is_footer_text#{not user["is_footer_text"]}#{str(user_id)}')
                 ],
                 [
                     InlineKeyboardButton('Username',
                                         callback_data=f'ident'),
-                    InlineKeyboardButton('✅ Enable' if not user["is_username"] else '❌ Disable',
+                    InlineKeyboardButton('❎ Off' if not user["is_username"] else '✅ On',
                                         callback_data=f'setgs#is_username#{not user["is_username"]}#{str(user_id)}')
                 ],
                 [
                     InlineKeyboardButton('Banner Image', callback_data=f'ident'),
-                    InlineKeyboardButton('✅ Enable' if not user["is_banner_image"] else '❌ Disable',
+                    InlineKeyboardButton('❎ Off' if not user["is_banner_image"] else '✅ On',
                                         callback_data=f'setgs#is_banner_image#{not user["is_banner_image"]}#{str(user_id)}')
                 ],
             ]
