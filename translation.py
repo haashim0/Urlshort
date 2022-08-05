@@ -88,6 +88,13 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 
 ])
 
+USER_ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
+
+    [
+        InlineKeyboardButton('Home', callback_data='start_command')
+    ]
+])
+
 USER_ABOUT_MESSAGE = """
 - Shortener Website: {base_site}
 
