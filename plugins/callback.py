@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, CallbackQuery
 from database.users import get_user
 from helpers import temp
-from translation import BACK_REPLY_MARKUP, HELP_MESSAGE, HELP_REPLY_MARKUP, ABOUT_TEXT, ABOUT_REPLY_MARKUP, START_MESSAGE, START_MESSAGE_REPLY_MARKUP
+from translation import BACK_REPLY_MARKUP, HELP_MESSAGE, HELP_REPLY_MARKUP, USER_ABOUT_MESSAGE, ABOUT_TEXT, ABOUT_REPLY_MARKUP, START_MESSAGE, START_MESSAGE_REPLY_MARKUP
 from utils import get_me_button
 import os
 import sys
@@ -49,14 +49,23 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
                 owner="@ask_admin001" ), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
         except Exception as e:
             logging.exception(e)
+            
+            elif query.data == 'user_command':
+        try:
+            await query.message.edit(HELP_MESSAGE.format(
+                firstname=temp.FIRST_NAME,
+                username=temp.BOT_USERNAME,
+                owner="@ask_admin001" ), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+        except Exception as e:
+            logging.exception(e)
 
     elif query.data == 'about_command':
         try:
             me = await bot.get_me()
             owner = await bot.get_users(OWNER_ID)
-            await query.message.edit(ABOUT_TEXT.format(
+            await query.message.edit(USER_ABOUT_MESSAGE.format(
                 me.mention(style='md'),
-                owner.mention(style='md'),), reply_markup=ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
+                owner.mention(style='md'),), reply_markup=USER_ABOUT_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
         except Exception as e:
             logging.exception(e)
 
