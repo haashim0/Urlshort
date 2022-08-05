@@ -35,7 +35,7 @@ ABOUT_TEXT = """
     
 `📝 Language:` [Python 3](https://www.python.org/)
 `🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [Dev](t.me/ask_admin001)
+`👨‍💻 Developer:` [BotCreator99](t.me/BotCreator99)
 `📢 Support:` {}
 """
 
@@ -60,8 +60,8 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
 START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('Copyrighted Links', callback_data='anc_command'),
-        InlineKeyboardButton('Help', callback_data=f'help_command'),
+        InlineKeyboardButton('📨 Copyrighted Links', callback_data='anc_command'),
+        InlineKeyboardButton('🧿 Help Disk', callback_data=f'help_command'),
         
     ],
         [
@@ -69,7 +69,7 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
         InlineKeyboardButton('Close', callback_data='delete')
     ],
             [
-        InlineKeyboardButton('Connect', url='https://dulink.in/'),
+        InlineKeyboardButton('♌️ Connect To Dulink', url='https://du-link.in/member/tools/api'),
     ],
 
 
