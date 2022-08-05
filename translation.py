@@ -8,59 +8,35 @@ START_MESSAGE = '''👋𝗛𝗲𝗹𝗹𝗼, {}
 
 
 HELP_MESSAGE = '''
-Hey! My name is {firstname}. I am a Link Shortener Bot, here to make your Work Easy and Help you to Earn more
-
-I have lots of handy features, such as 
-
-- [Hyperlink](https://t.me/{username})
-- Buttons convert support
-- Header and Footer Text support
-- Replace Username
-- Banner Image
-
-Helpful commands:
-
-- /start: Starts me! You've probably already used this.
-- /help: Sends this message; I'll tell you more about myself!
-
-If you have any bugs or questions on how to use me, contact to {owner}.
-
-Below are some features I provide'''
+hii'''
 
 
 ABOUT_TEXT = """
-**My Details:**
-
-`🤖 Name:` ** {} **
-    
-`📝 Language:` [Python 3](https://www.python.org/)
-`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
-`👨‍💻 Developer:` [BotCreator99](t.me/BotCreator99)
-`📢 Support:` {}
+klijihiuog
 """
 
 
 HELP_REPLY_MARKUP = InlineKeyboardMarkup([
 
     [
-        InlineKeyboardButton('Home', callback_data='start_command')
+        InlineKeyboardButton('🧰 Home', callback_data='start_command')
     ]
 ])
 
 
 ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('Home', callback_data=f'start_command'),
-        InlineKeyboardButton('Help', callback_data=f'help_command')
+        InlineKeyboardButton('🧰 Home', callback_data=f'start_command'),
+        InlineKeyboardButton('🧿 Help Disk', callback_data=f'help_command')
     ],
     [
-        InlineKeyboardButton('Close', callback_data='delete')
+        InlineKeyboardButton('🚫 Close', callback_data='delete')
     ]
 ])
 
 START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('📨CopyrightLinks', callback_data='anc_command'),
+        InlineKeyboardButton('©️CopyrightLinks', callback_data='anc_command'),
         InlineKeyboardButton('🧿 Help Disk', callback_data='help_command'),
         
     ],
