@@ -64,14 +64,9 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
         InlineKeyboardButton('🧿 Help Disk', callback_data='help_command'),
         
     ],
-     [
-        InlineKeyboardButton('✳️ On|Off', callback_data='user_command'),
-        InlineKeyboardButton('⚙️ Settings', callback_data='about_command'),
-        
-    ],
         [
-        InlineKeyboardButton('About', callback_data='about_command'),
-        InlineKeyboardButton('Close', callback_data='delete')
+        InlineKeyboardButton('⚙️ Settings', callback_data='about_command'),
+        InlineKeyboardButton('❤️ Channel', url='https://t.me/DuLinkUpdate')
     ],
             [
         InlineKeyboardButton('♌️ Connect To Dulink', url='https://du-link.in/member/tools/api'),
@@ -110,10 +105,6 @@ USER_ABOUT_MESSAGE = """
 
 - Banner Image: {banner_image}
 """
-
-SETTINGS_MESSAGE = '''
-hii
-'''
 
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, `/shortener_api api`
