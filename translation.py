@@ -61,12 +61,12 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
         InlineKeyboardButton('📨CopyrightLinks', callback_data='anc_command'),
-        InlineKeyboardButton('🧿 Help Disk', callback_data=f'help_command'),
+        InlineKeyboardButton('🧿 Help Disk', callback_data='help_command'),
         
     ],
      [
         InlineKeyboardButton('✳️ On|Off', callback_data='user_command'),
-        InlineKeyboardButton('⚙️ Settings', callback_data=f'user_about_command'),
+        InlineKeyboardButton('⚙️ Settings', callback_data='about_command'),
         
     ],
         [
