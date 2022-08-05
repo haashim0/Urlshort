@@ -124,5 +124,5 @@ This image will be automatically replaced with other images in the post
 
 To remove custom image, `/banner_image remove`
 
-Eg: `/banner_image https://www.nicepng.com/png/detail/436-4369539_movie-logo-film.png`"""
+Eg: `/banner_image https://wallpapercave.com/wp/wp6674867.jpg`"""
 
