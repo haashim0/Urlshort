@@ -1,13 +1,9 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-START_MESSAGE = '''Hello, {}
+START_MESSAGE = '''👋𝗛𝗲𝗹𝗹𝗼, {}
+𝗜 𝗖𝗮𝗻 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝗟𝗶𝗻𝗸 𝗧𝗼 𝗦𝗵𝗼𝗿𝘁𝗟𝗶𝗻𝗸. 𝗦𝗲𝗻𝗱 𝗠𝗲 𝗔𝗻𝘆 𝗣𝗼𝘀𝘁 𝗪𝗶𝘁𝗵 𝗟𝗶𝗻𝗸𝘀 𝗔𝗻𝗱 𝗜 𝗪𝗶𝗹𝗹 𝗦𝗵𝗼𝗿𝘁𝗲𝗻 𝗔𝗹𝗹 𝗟𝗶𝗻𝗸𝘀 𝗜𝗻 𝗜𝘁 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝘁𝗼 𝗗𝘂𝗟𝗶𝗻𝗸.
 
-I'm a Bot to Short Other Links to du-link.in Links by Using your API. 
-
-Just Send me Any Post with Other Links. I will Convert Those Links Using Your API and Send them Back To You
-
-Hit /help for more information about this Bot
 '''
 
 
