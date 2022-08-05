@@ -55,7 +55,7 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
             await query.message.edit(USER_ABOUT_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
                 username=temp.BOT_USERNAME,
-                owner="@ask_admin001" ), reply_markup=USER_ABOUT_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
+                owner="@ask_admin001" ), reply_markup=USER_ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
         except Exception as e:
             logging.exception(e)
 
