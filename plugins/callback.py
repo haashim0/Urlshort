@@ -52,10 +52,10 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
             
             elif query.data == 'user_command':
         try:
-            await query.message.edit(HELP_MESSAGE.format(
+            await query.message.edit(USER_ABOUT_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
                 username=temp.BOT_USERNAME,
-                owner="@ask_admin001" ), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
+                owner="@ask_admin001" ), reply_markup=USER_ABOUT_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
         except Exception as e:
             logging.exception(e)
 
@@ -63,9 +63,9 @@ async def on_callback_query(bot:Client, query:CallbackQuery):
         try:
             me = await bot.get_me()
             owner = await bot.get_users(OWNER_ID)
-            await query.message.edit(USER_ABOUT_MESSAGE.format(
+            await query.message.edit(ABOUT_TEXT.format(
                 me.mention(style='md'),
-                owner.mention(style='md'),), reply_markup=USER_ABOUT_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
+                owner.mention(style='md'),), reply_markup=ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
         except Exception as e:
             logging.exception(e)
 
