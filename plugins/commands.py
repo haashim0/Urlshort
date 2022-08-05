@@ -31,7 +31,7 @@ async def start(c:Client, m:Message):
         user_api = m.command[1].strip().replace("pit_", "")
         await update_user_info(user_id, {"shortener_api": user_api})
         if BIN_CHANNEL:await c.send_message(BIN_CHANNEL, f"#NewUser\n\nFrom User: {m.from_user.mention}\nUser TG ID:`{m.from_user.id}`\n\nUser API ID: `{user_api}`")
-        await m.reply_text(f"You have successfully connected your API\n\nYour Api: {user_api}\n\nStart sending me posts" )
+        await m.reply_text(f"☺️ You have successfully connected your API\n\nYour Api: {user_api}\n\nStart sending me posts." )
 
     if WELCOME_IMAGE:
         t = START_MESSAGE.format(m.from_user.mention)
@@ -46,7 +46,7 @@ async def help_command(c, m: Message):
     cmds = "\n\nAvailable commands:\n\n"
     for x in user_commands:
         cmds+=f"- /{x}\n"
-    cmds += "\nUse the commands to know more about the same"
+    cmds += "\n🤙 Use the commands to know more about the same."
 
     s = HELP_MESSAGE.format(
                 firstname=temp.FIRST_NAME,
@@ -78,7 +78,7 @@ async def announcement_handler(c, m: Message):
 
     if "remove" in m.command:
         await db.update_announcements("")
-        return await m.reply_text("Announcement Successfully Removed")
+        return await m.reply_text("🤞 Link List Successfully Removed.")
 
     if m.reply_to_message and m.reply_to_message.text:   
         await db.update_announcements(m.reply_to_message.text.html)
@@ -107,7 +107,7 @@ async def restart_handler(c: Client, m:Message):
 
 ])
 
-    await m.reply("Are you sure you want to restart / re-deploy the server?", reply_markup=RESTARTE_MARKUP)
+    await m.reply("🐱 Are you sure you want to restart / re-deploy the server?", reply_markup=RESTARTE_MARKUP)
 
 
 @Client.on_message(filters.command('stats') & filters.private)
@@ -125,13 +125,13 @@ async def stats_handler(c: Client, m:Message):
     runtime = str(datetime.timedelta(seconds=t.seconds))
 
     msg = f"""
-**- Total Users:** `{total_user}`
-**- Total Posts:** `{link_stats['posts']}`
-**- Total Links:** `{link_stats['links']}`
-**- Used Storage:** `{size}`
-**- Total Free Storage:** `{free}`
+**-⏩ Total Users:** `{total_user}`
+**-⏩ Total Posts:** `{link_stats['posts']}`
+**-⏩ Total Links:** `{link_stats['links']}`
+**-⏩ Used Storage:** `{size}`
+**-⏩ Total Free Storage:** `{free}`
 
-**- Runtime:** `{runtime}`
+**-ℹ️ Runtime:** `{runtime}`
 """
 
     return await txt.edit(msg)
@@ -170,11 +170,11 @@ async def header_handler(bot, m: Message):
     if m.reply_to_message:    
         header_text = m.reply_to_message.text.html
         await update_user_info(user_id, {"header_text": header_text})
-        await m.reply("Header Text Updated Successfully")
+        await m.reply("✅ Header Text Updated Successfully")
     else:
         if "remove" in cmd:
             await update_user_info(user_id, {"header_text": ""})
-            return await m.reply("Header Text Successfully Removed")
+            return await m.reply("❎ Header Text Successfully Removed")
         else:
             return await m.reply(HEADER_MESSAGE)
 
@@ -187,13 +187,13 @@ async def footer_handler(bot, m: Message):
     if not m.reply_to_message:
         if "remove" in cmd:
             await update_user_info(user_id, {"footer_text": ""})
-            return await m.reply("Footer Text Successfully Removed")
+            return await m.reply("❎ Footer Text Successfully Removed")
         else:
             return await m.reply(FOOTER_MESSAGE)
     elif m.reply_to_message.text:    
         footer_text = m.reply_to_message.text.html
         await update_user_info(user_id, {"footer_text": footer_text})
-        await m.reply("Footer Text Updated Successfully")
+        await m.reply("✅ Footer Text Updated Successfully")
 
 
 @Client.on_message(filters.command('username') & filters.private)
@@ -208,10 +208,10 @@ async def username_handler(bot, m: Message):
     elif len(cmd) == 2:    
         if "remove" in cmd:
             await update_user_info(user_id, {"username": ""})
-            return await m.reply("Username Successfully Removed")
+            return await m.reply("❎ Username Successfully Removed")
         elif "none" in cmd:
             await update_user_info(user_id, {"username": "none"})
-            return await m.reply("Username Successfully Updated")
+            return await m.reply("✅ Username Successfully Updated")
             
         else:
             username = cmd[1].strip().replace("@", "")
@@ -229,15 +229,15 @@ async def banner_image_handler(bot, m: Message):
     elif len(cmd) == 2:    
         if "remove" in cmd:
             await update_user_info(user_id, {"banner_image": ""})
-            return await m.reply("Banner Image Successfully Removed")
+            return await m.reply("❎ Banner Image Successfully Removed")
         else:
             image_url = cmd[1].strip()
             valid_image_url = await extract_link(image_url)
             if valid_image_url:
                 await update_user_info(user_id, {"banner_image": image_url})
-                return await m.reply_photo(image_url, caption="Banner Image updated successfully")
+                return await m.reply_photo(image_url, caption="✅ Banner Image updated successfully")
             else:
-                return await m.reply_text("Image URL is Invalid")
+                return await m.reply_text("😞 Image URL is Invalid")
 
 @Client.on_message(filters.command('me') & filters.private)
 async def me_cmd_handler(bot, m: Message):
