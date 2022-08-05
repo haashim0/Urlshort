@@ -8,10 +8,11 @@ START_MESSAGE = '''👋𝗛𝗲𝗹𝗹𝗼, {}
 
 
 HELP_MESSAGE = '''
-Help and bot not working so contact me :-@Gaurav4x @Y76D42
+🤝 Help and bot not working so contact me :-@Gaurav4x @Y76D42
 
 ℹ️ And how to use this bot and command so watch my video.
 :-https://youtu.be/r5B-Mn4W2MA
+
 '''
 
 
@@ -27,7 +28,6 @@ ABOUT_TEXT = """
 /banner_image - set banner img and click on command check out more info.
 
 /me - your account information and on|off all settings.
-
 
 ℹ️ And how to use this bot and command so watch my video.
 :-https://youtu.be/r5B-Mn4W2MA
@@ -87,17 +87,19 @@ USER_ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 USER_ABOUT_MESSAGE = """
 ❤️ Welcome to dulink and bot !!
 
-- Api: {shortener_api}
+- Api :- {shortener_api}
 
-- Username: @{username}
+- Username :- @{username}
 
-- Header Text: 
+- Header Text :- 
 {header_text}
 
-- Footer Text: 
+- Footer Text :- 
 {footer_text}
 
-- Banner Image: {banner_image}
+- Banner Image :- {banner_image}
+
+👇 click on this buttons and on|off features.
 """
 
 
