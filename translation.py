@@ -65,8 +65,8 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
         
     ],
      [
-        InlineKeyboardButton('✳️ On|Off', callback_data='me_command'),
-        InlineKeyboardButton('⚙️ Settings', callback_data=f'settings_command'),
+        InlineKeyboardButton('✳️ On|Off', callback_data='user_command'),
+        InlineKeyboardButton('⚙️ Settings', callback_data=f'user_about_command'),
         
     ],
         [
