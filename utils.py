@@ -7,6 +7,7 @@ from config import *
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid
+from pyrogram.enums import ParseMode
 
 import logging
 logger = logging.getLogger(__name__)
@@ -56,19 +57,18 @@ async def main_convertor_handler(message:Message, user=None):
         fileid = medias.file_id
         if message.photo and banner_image:
             fileid = banner_image
-
+            
     if message.text:
-        return await message.reply(shortenedText, disable_web_page_preview=True, reply_markup=reply_markup, quote=True)
+        return await message.reply(shortenedText, disable_web_page_preview=True, reply_markup=reply_markup, quote=True, parse_mode=ParseMode.HTML)
 
     elif message.media:
 
         if message.document:
-            return await message.reply_document(fileid, caption=shortenedText, reply_markup=reply_markup, quote=True)
+            return await message.reply_document(fileid, caption=shortenedText, reply_markup=reply_markup, quote=True, parse_mode=ParseMode.HTML)
 
         
         elif message.photo:
-            return await message.reply_photo(fileid, caption=shortenedText, reply_markup=reply_markup, quote=True)
-
+            return await message.reply_photo(fileid, caption=shortenedText, reply_markup=reply_markup, quote=True, parse_mode=ParseMode.HTML)
 
 # Reply markup 
 async def reply_markup_handler(message:Message, method_func, user):
