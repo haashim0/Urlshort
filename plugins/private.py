@@ -53,7 +53,7 @@ async def private_link_handler(c:Client, message:Message):
             await c.send_message(BIN_CHANNEL, text=bin_caption)
 
     except Exception as e:
-        await message.reply(", quote=false)
+        await message.reply("" % e, quote=false)
         logger.exception(e)
     finally:
         await txt.delete()
