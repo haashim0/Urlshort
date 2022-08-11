@@ -31,7 +31,7 @@ async def private_link_handler(c:Client, message:Message):
     user = await get_user(message.from_user.id)
 
     if not user["shortener_api"]:
-        return await message.reply_text(f"ℹ️ send /start command and click on Connect To Dulink button...)
+        return await message.reply_text(f"ℹ️ send start command and click on Connect To Dulink button...)
 
     try:
         txt = await message.reply('😜 Converting......', quote=True)
