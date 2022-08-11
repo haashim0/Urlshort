@@ -5,7 +5,7 @@ START_MESSAGE = '''👋𝗛𝗲𝗹𝗹𝗼, {}
 𝗜 𝗖𝗮𝗻 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝗟𝗶𝗻𝗸 𝗧𝗼 𝗦𝗵𝗼𝗿𝘁𝗟𝗶𝗻𝗸. 𝗦𝗲𝗻𝗱 𝗠𝗲 𝗔𝗻𝘆 𝗣𝗼𝘀𝘁 𝗪𝗶𝘁𝗵 𝗟𝗶𝗻𝗸𝘀 𝗔𝗻𝗱 𝗜 𝗪𝗶𝗹𝗹 𝗦𝗵𝗼𝗿𝘁𝗲𝗻 𝗔𝗹𝗹 𝗟𝗶𝗻𝗸𝘀 𝗜𝗻 𝗜𝘁 𝗖𝗼𝗻𝘃𝗲𝗿𝘁 𝘁𝗼 𝗗𝘂𝗟𝗶𝗻𝗸.
 
 ℹ️ 𝗔𝗻𝗱 𝗵𝗼𝘄 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁 𝗮𝗻𝗱 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝘀𝗼 𝘄𝗮𝘁𝗰𝗵 𝗺𝘆 𝘃𝗶𝗱𝗲𝗼.
-:-https://youtu.be/r5B-Mn4W2MA
+:-https://youtu.be/lpzEll82EQc
 
 '''
 
@@ -14,7 +14,7 @@ HELP_MESSAGE = '''
 🤝 Help and bot not working so contact me :-@Gaurav4x @Y76D42
 
 ℹ️ And how to use this bot and command so watch my video.
-:-https://youtu.be/r5B-Mn4W2MA
+:-https://youtu.be/lpzEll82EQc
 
 '''
 
@@ -33,7 +33,7 @@ ABOUT_TEXT = """
 /me - your account information and on|off all settings.
 
 ℹ️ And how to use this bot and command so watch my video.
-:-https://youtu.be/r5B-Mn4W2MA
+:-https://youtu.be/lpzEll82EQc
 """
 
 
@@ -106,10 +106,8 @@ USER_ABOUT_MESSAGE = """
 """
 
 
-SHORTENER_API_MESSAGE = """ send /start command and click on "Connect To Dulink"
-            
-ℹ️ And how to use this bot and command so watch my video.
-:-https://youtu.be/r5B-Mn4W2MA"""
+SHORTENER_API_MESSAGE = """ ℹ️ send /start command and click on "Connect To Dulink"
+   """
 
 HEADER_MESSAGE = """Reply to the Header Text You Want
 
