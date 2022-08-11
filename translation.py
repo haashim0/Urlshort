@@ -106,9 +106,7 @@ USER_ABOUT_MESSAGE = """
 """
 
 
-SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, `/shortener_api api.`
-            
-Ex: `/shortener_api 8f5987ac3a45a271b420aa5099d4792af53fa953`
+SHORTENER_API_MESSAGE = """ send /start command and click on "Connect To Dulink"
             
 ℹ️ And how to use this bot and command so watch my video.
 :-https://youtu.be/r5B-Mn4W2MA"""
