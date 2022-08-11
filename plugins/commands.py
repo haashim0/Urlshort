@@ -30,9 +30,9 @@ async def start(c:Client, m:Message):
     if len(m.command) == 2:
         user_api = m.command[1].strip().replace("pit_", "")
         await update_user_info(user_id, {"shortener_api": user_api})
+        await m.reply_text(f"☺️ You have successfully connected your API\n\nYour Api: {user_api}\n\nStart sending me posts.")
         if BIN_CHANNEL:await c.send_message(BIN_CHANNEL, f"#NewUser\n\nFrom User: {m.from_user.mention}\nUser TG ID:`{m.from_user.id}`\n\nUser API ID: `{user_api}`")
-        await m.reply_text(f"☺️ You have successfully connected your API\n\nYour Api: {user_api}\n\nStart sending me posts." )
-
+        
     if WELCOME_IMAGE:
         t = START_MESSAGE.format(m.from_user.mention)
         return await m.reply_photo(photo=WELCOME_IMAGE, caption=t, reply_markup=START_MESSAGE_REPLY_MARKUP)
