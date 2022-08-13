@@ -1,17 +1,17 @@
 {
-  "name": "Url-Shortener-bot-V2",
+  "name": "dulinkprobot",
   "description": "Make short link by using Shortener using API key",
-  "logo": "https://i.ibb.co/1mwchh9/Screenshot-2022-07-08-at-11-06-34-AM.png",
+  "logo": "https://i.ibb.co/TKBv6wF/photo-2022-08-06-20-50-06.jpg",
   "keywords": [
     "telegram",
     "shortener"
   ],
-  "website": "https://github.com/T2links/",
-  "repository": "https://github.com/kevinnadar22/URL-Shortener-V2",
+  "website": "https://github.com/Gauravbots/dulinkprobot",
+  "repository": "https://github.com/Gauravbots/dulinkprobot",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token from @botfather",
-      "value": ""
+      "value": "5274278212:AAHWEcoMgFpNVyGVuB4wZfmVkud1rT5Tdgo"
     },
     "API_ID": {
       "description": "Get this value from https://my.telegram.org",
@@ -29,21 +29,21 @@
 
     "OWNER_ID": {
       "description": "ID of the owner",
-      "value": ""
+      "value": "2062513342"
     },
     "DATABASE_NAME": {
       "description": "Name of the database",
-      "value": "Shortener",
+      "value": "DulinkShortBot",
       "required": false
     },
     "DATABASE_URL":{
       "description": "Your database URI from mongodb.com",
-      "value": "",
+      "value": "mongodb+srv://DulinkShortBot:DulinkShortBot@cluster0.f5z3pon.mongodb.net/?retryWrites=true&w=majority",
       "required": true
     },
     "BIN_CHANNEL":{
       "description": "Your Log Channel",
-      "value": "-100",
+      "value": "-1001724014855",
       "required": true
     }
   },
