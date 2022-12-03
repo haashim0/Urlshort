@@ -12,7 +12,7 @@ sudo apt install python3-pip
 pip3 install -r requirements.txt
 ```
 ```
-python main.py
+python3 main.py
 
 ```
 
