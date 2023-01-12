@@ -11,7 +11,7 @@ def is_enabled(value, default):
 # Mandatory variables for the bot to start
 API_ID = int(os.environ.get("API_ID", "13956112"))
 API_HASH = os.environ.get("API_HASH", "a14d6d445c6be0a22f4a5ad401e0eab6")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "5274278212:AAGGCSmMGYUglecyrtrs1j43m_kGC_vwink")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5274278212:AAGI-dJ8XXHopKsQArhKGHzA_mpz4t5lZiY")
 ADMINS = list(int(i.strip()) for i in os.environ.get("ADMINS").split(",")) if os.environ.get("ADMINS") else []
 OWNER_ID = int(os.environ.get("OWNER_ID", "2062513342"))
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "DulinkShortBot")
